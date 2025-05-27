@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel de Administração - King of Smoke</title>
+  <link rel="stylesheet" href="Css/Admin.css" />
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Painel de Administração</h1>
+  </header>
+
+  <main class="admin-container">
+    <section class="admin-form">
+      <h2>Adicionar Produto</h2>
+      <form id="productForm">
+        <input type="text" placeholder="Nome do produto" required />
+        <input type="text" placeholder="Descrição" required />
+        <input type="number" placeholder="Preço (R$)" required />
+        <input type="url" placeholder="URL da imagem" required />
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+
+    <section class="admin-list">
+      <h2>Produtos Cadastrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="productTable">
+          <!-- Produtos simulados -->
+          <tr>
+            <td>Elfbar 10000</td>
+            <td>R$ 135,00</td>
+            <td><button class="edit-btn">Editar</button> <button class="delete-btn">Excluir</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    // Simulação de adição dinâmica
+    document.getElementById('productForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const inputs = this.querySelectorAll('input');
+      const nome = inputs[0].value;
+      const preco = parseFloat(inputs[2].value).toFixed(2);
+
+      const table = document.getElementById('productTable');
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${nome}</td>
+        <td>R$ ${preco}</td>
+        <td><button class="edit-btn">Editar</button> <button class="delete-btn">Excluir</button></td>
+      `;
+      table.appendChild(row);
+
+      this.reset();
+    });
+  </script>
+</body>
+</html>
