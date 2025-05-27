@@ -1,179 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Css/Style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="Css/Style.css" />
     <title>King Of Smoke</title>
 </head>
 <body>
     <header class="Navbar">
         <nav>
-            <img src="/Img/LogoKingOfSmoke.jpg" alt="">
+            <img src="/Img/LogoKingOfSmoke.jpg" alt="Logo King Of Smoke" />
             <ul>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#Especial">Especiais</a></li>
-                <li><a href="#Catalogo">Catalogo</a></li>
+                <li><a href="#Catalogo">Catálogo</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="HomeSection" id="Home">
-    <div class="HomeLeft">
-        <!--<video src="/Img/VideoHome.MP4" autoplay muted loop playsinline></video>-->
-    </div>
-    <div class="HomeRight">
-        <h1>King of Smoke</h1>
-        <p>Somos uma loja de vape 100% legalizada, oferecendo os melhores produtos com qualidade e confiança.</p>
-        <div class="buttons">
-            <a href="https://wa.me/SEUNUMERO" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
-            <a href="https://instagram.com/SUAINSTA" target="_blank" class="btn btn-instagram">Instagram</a>
+        <div class="HomeLeft">
+            <!-- <video src="/Img/VideoHome.MP4" autoplay muted loop playsinline></video> -->
         </div>
-    </div>
-</section>
+        <div class="HomeRight">
+            <h1>King of Smoke</h1>
+            <p>Somos uma loja de vape 100% legalizada, oferecendo os melhores produtos com qualidade e confiança.</p>
+            <div class="buttons">
+                <a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+                <a href="https://instagram.com/SUAINSTA" target="_blank" rel="noopener" class="btn btn-instagram">Instagram</a>
+            </div>
+        </div>
+    </section>
 
-
-  <section class="EspecialSection" id="Especial">
-    <div class="EspecialLeft" id="productInfo">
-        <h2>Ignite 8000 - Watermelon Ice</h2>
-        <p>Refrescante sabor de melancia gelada, até 8000 puffs.</p>
-        <span>R$ 120,00</span>
-    </div>
-
-    <div class="EspecialRight">
-        <button id="prevBtn">&#10094;</button>
-
-        <div class="carousel" id="carousel">
-            <img src="/Img/Ignite8000_WatermelonIce.jpg"
-                data-name="Ignite 8000 - Watermelon Ice"
-                data-desc="Refrescante sabor de melancia gelada, até 8000 puffs."
-                data-price="R$ 120,00"
-                alt="Ignite 8000">
-
-            <img src="/Img/ElfbarBC10000_SpecialEdition.jpg"
-                data-name="Elfbar BC10000 - Edição Especial"
-                data-desc="Mais de 10000 puffs, com sabores exclusivos e design elegante."
-                data-price="R$ 135,00"
-                alt="Elfbar 10000">
+    <section class="EspecialSection" id="Especial">
+        <div class="EspecialLeft" id="productInfo">
+            <h2>Ignite 8000 - Watermelon Ice</h2>
+            <p>Refrescante sabor de melancia gelada, até 8000 puffs.</p>
+            <span>R$ 120,00</span>
         </div>
 
-        <button id="nextBtn">&#10095;</button>
-    </div>
-</section>
-
-
-
-   <section class="CatalogoSection" id="Catalogo">
-    <div class="CatalogoContainer">
-        <h2>Catálogo</h2>
-
-        <!-- Filtro de categorias -->
-        <div class="CatalogoFiltro">
-            <button class="filter-btn active" data-category="all">Todos</button>
-            <button class="filter-btn" data-category="ignite">Ignite</button>
-            <button class="filter-btn" data-category="elfbar">Elfbar</button>
+        <div class="EspecialRight">
+            <button id="prevBtn" aria-label="Produto anterior">&#10094;</button>
+            <div class="carousel" id="carousel" role="list">
+                <img src="/Img/Ignite8000_WatermelonIce.jpg"
+                    data-name="Ignite 8000 - Watermelon Ice"
+                    data-desc="Refrescante sabor de melancia gelada, até 8000 puffs."
+                    data-price="R$ 120,00"
+                    alt="Ignite 8000 - Watermelon Ice"
+                    role="listitem"
+                />
+                <img src="/Img/ElfbarBC10000_SpecialEdition.jpg"
+                    data-name="Elfbar BC10000 - Edição Especial"
+                    data-desc="Mais de 10000 puffs, com sabores exclusivos e design elegante."
+                    data-price="R$ 135,00"
+                    alt="Elfbar BC10000 - Edição Especial"
+                    role="listitem"
+                />
+            </div>
+            <button id="nextBtn" aria-label="Próximo produto">&#10095;</button>
         </div>
+    </section>
 
-        <!-- Grid de produtos -->
-        <div class="CatalogoGrid">
-            <div class="CatalogoCard" data-category="ignite">
-                <img src="/Img/IgniteV250_BlueberryIce.jpg" alt="">
-                <div class="CatalogoInfo">
-                    <h3>Ignite V250 BlueBerry Ice</h3>
-                    <span class="preco">R$ 90,00</span>
-                </div>
+    <section class="CatalogoSection" id="Catalogo">
+        <div class="CatalogoContainer">
+            <h2>Catálogo</h2>
+
+            <div class="CatalogoFiltro" role="group" aria-label="Filtro de categorias">
+                <button class="filter-btn active" data-category="all" aria-pressed="true">Todos</button>
+                <button class="filter-btn" data-category="ignite" aria-pressed="false">Ignite</button>
+                <button class="filter-btn" data-category="elfbar" aria-pressed="false">Elfbar</button>
             </div>
 
-            <div class="CatalogoCard" data-category="elfbar">
-                <img src="/Img/ElfbarBC10000_Blueberry.jpg" alt="">
-                <div class="CatalogoInfo">
-                    <h3>Elfbar BC10000 BlueBerry</h3>
-                    <span class="preco">R$ 135,00</span>
+            <div class="CatalogoGrid">
+                <div class="CatalogoCard" data-category="ignite">
+                    <img src="/Img/IgniteV250_BlueberryIce.jpg" alt="Ignite V250 BlueBerry Ice" />
+                    <div class="CatalogoInfo">
+                        <h3>Ignite V250 BlueBerry Ice</h3>
+                        <span class="preco">R$ 90,00</span>
+                    </div>
                 </div>
+
+                <div class="CatalogoCard" data-category="elfbar">
+                    <img src="/Img/ElfbarBC10000_Blueberry.jpg" alt="Elfbar BC10000 BlueBerry" />
+                    <div class="CatalogoInfo">
+                        <h3>Elfbar BC10000 BlueBerry</h3>
+                        <span class="preco">R$ 135,00</span>
+                    </div>
+                </div>
+
+                <!-- Adicione mais produtos aqui -->
             </div>
-
-            <!-- Adicione mais produtos aqui -->
         </div>
+    </section>
+
+    <footer class="Footer">
+  <div class="FooterContainer">
+    <div class="FooterSection">
+      <h3>Localização</h3>
+      <p>Rua das Flores, 123 - Centro<br>São Paulo - SP, Brasil</p>
     </div>
-</section>
 
-<footer class="Footer">
-    <div class="FooterContainer">
-        <div class="FooterSection">
-            <h3>Localização</h3>
-            <p>Rua das Flores, 123 - Centro<br>São Paulo - SP, Brasil</p>
-        </div>
-
-        <div class="FooterSection">
-            <h3>Contato</h3>
-            <p>Telefone: (11) 99999-9999</p>
-            <p>Email: contato@vapelogado.com</p>
-            <p>
-                <a href="https://instagram.com/seuperfil" target="_blank" rel="noopener" class="social-link">Instagram</a> | 
-                <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="social-link">WhatsApp</a>
-            </p>
-        </div>
+    <div class="FooterSection">
+      <h3>Contato</h3>
+      <p>Telefone: (11) 99999-9999</p>
+      <p>Email: contato@vapelogado.com</p>
+      <p>
+        <a href="#" class="social-link">Instagram</a> |
+        <a href="#" class="social-link">WhatsApp</a>
+      </p>
     </div>
-    <p class="Copyright">Todos os direitos Reservados @AlvezDev</p>
+  </div>
+
+  <p class="Copyright">
+    Todos os direitos Reservados @AlvezDev
+  </p>
 </footer>
 
-</body>
-</html>
 
-<script>
-    const images = document.querySelectorAll('.carousel img');
-    const info = document.getElementById('productInfo');
-    const prev = document.getElementById('prevBtn');
-    const next = document.getElementById('nextBtn');
-    let index = 0;
+    <script>
+        const images = document.querySelectorAll('.carousel img');
+        const info = document.getElementById('productInfo');
+        const prev = document.getElementById('prevBtn');
+        const next = document.getElementById('nextBtn');
+        let index = 0;
 
-    function showProduct(i) {
-        images.forEach(img => img.classList.remove('active'));
-        images[i].classList.add('active');
+        function showProduct(i) {
+            images.forEach(img => img.classList.remove('active'));
+            images[i].classList.add('active');
 
-        const name = images[i].getAttribute('data-name');
-        const desc = images[i].getAttribute('data-desc');
-        const price = images[i].getAttribute('data-price');
+            const name = images[i].getAttribute('data-name');
+            const desc = images[i].getAttribute('data-desc');
+            const price = images[i].getAttribute('data-price');
 
-        info.innerHTML = `
-            <h2>${name}</h2>
-            <p>${desc}</p>
-            <span>${price}</span>
-        `;
-    }
+            info.innerHTML = `
+                <h2>${name}</h2>
+                <p>${desc}</p>
+                <span>${price}</span>
+            `;
+        }
 
-    prev.addEventListener('click', () => {
-        index = (index - 1 + images.length) % images.length;
+        prev.addEventListener('click', () => {
+            index = (index - 1 + images.length) % images.length;
+            showProduct(index);
+        });
+
+        next.addEventListener('click', () => {
+            index = (index + 1) % images.length;
+            showProduct(index);
+        });
+
+        // Mostrar o primeiro por padrão
         showProduct(index);
-    });
 
-    next.addEventListener('click', () => {
-        index = (index + 1) % images.length;
-        showProduct(index);
-    });
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const cards = document.querySelectorAll(".CatalogoCard");
 
-    // Mostrar o primeiro por padrão
-    showProduct(index);
+        filterButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                // Marca botão ativo e atualiza aria-pressed
+                filterButtons.forEach(b => {
+                    b.classList.remove("active");
+                    b.setAttribute("aria-pressed", "false");
+                });
+                btn.classList.add("active");
+                btn.setAttribute("aria-pressed", "true");
 
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const cards = document.querySelectorAll(".CatalogoCard");
+                const category = btn.getAttribute("data-category");
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            // Marca botão ativo
-            filterButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-
-            const category = btn.getAttribute("data-category");
-
-            cards.forEach(card => {
-                const cardCategory = card.getAttribute("data-category");
-                if (category === "all" || cardCategory === category) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
+                cards.forEach(card => {
+                    const cardCategory = card.getAttribute("data-category");
+                    card.style.display = (category === "all" || cardCategory === category) ? "block" : "none";
+                });
             });
         });
-    });
-</script>
+    </script>
+</body>
+</html>
